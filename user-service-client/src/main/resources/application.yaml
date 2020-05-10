@@ -1,0 +1,22 @@
+server:
+  port: 8010
+
+spring:
+  application:
+    # 应用名称
+    name: user-service-client
+  cloud:
+    nacos:
+      discovery:
+        # nacos 地址
+        server-addr: 192.168.239.133:8848
+
+feign:
+  httpclient:
+    # feign 最大连接数 200
+    max-connections: 200
+    # feign 单个路径的最大连接数 50
+    max-connections-per-route: 50
+  okhttp:
+    enabled: true
+
